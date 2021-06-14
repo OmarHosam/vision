@@ -6,12 +6,21 @@
   text-decoration: none;
   font-family: 'Poppins', sans-serif;
 }
+body{
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	min-height: 100vh;
+	margin: 0;
+}
 .wrapper{
   background: #171c24;
+  opacity: 95%;
   position: fixed;
   width: 100%;
 }
 .wrapper nav{
+  opacity: 90%;
   position: relative;
   display: flex;
   max-width: calc(100% - 200px);
@@ -143,6 +152,22 @@ nav .content .links{
 .content .links ul li:hover ul{
   top: 0;
 }
+.dummy-text{
+  margin-top: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  bottom: 0;
+  width: 100%;
+  z-index: -1;
+  padding: 0 20px;
+  transform: translate(-50%, -50%);
+}
+.dummy-text h2{
+  font-size: 40px;
+  bottom: 0;
+  margin: 5px 0;
+}
 /* Responsive code start */
 @media screen and (max-width: 1250px){
   .wrapper nav{
@@ -160,6 +185,9 @@ nav .content .links{
   }
   .wrapper .search-box input{
     padding: 0 100px 0 15px;
+  }
+  .dummy-text h2{
+  	font-size: 80;
   }
 }
 @media screen and (max-width: 900px){
@@ -223,13 +251,17 @@ nav .content .links{
     line-height: 30px;
     border-radius: 5px!important;
   }
+  .dummy-text h2{
+  	font-size: 40px;
+  	margin: 5px 0;
+  }
 }
 @media screen and (max-width: 400px){
   .wrapper nav{
-    padding: 0 10px;
+    padding: 0 20px;
   }
   .content .logo a{
-    font-size: 17px;
+    font-size: 5px;
   }
   .wrapper .search-box{
     max-width: calc(100% - 70px);
@@ -241,28 +273,20 @@ nav .content .links{
   .wrapper .search-box input{
     padding-right: 30px;
   }
+  .dummy-text h2{
+  	font-size: 30px;
+  	margin: 5px 0;
+  }
 }
-.dummy-text{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  z-index: -1;
-  padding: 0 20px;
-  text-align: center;
-  transform: translate(-50%, -50%);
-}
-.dummy-text h2{
-  font-size: 45px;
-  margin: 5px 0;
-}
-footer {
+
+/*footer {
 	position: absolute;
 	bottom: 0;
 	left: 0;
 	right: 0;
 	margin: 0;
 	padding: 0;
+	height: 100%;
 	box-sizing: border-box;
 	background: #111;
 	height: auto;
@@ -280,7 +304,7 @@ footer {
 }
 .footer-content h3 {
 	font-size: 1.8rem;
-	font-weight: 400;
+	font-weight: 300;
 	text-transform: capitalize;
 	line-height: 3rem;
 }
@@ -326,4 +350,12 @@ footer {
 	text-transform: uppercase;
 	opacity: .4;
 	font-weight: 200;
+}*/
+footer {
+	font-size: 10px;
+	position: fixed;
+	background-position: 0% 0%;
+	background-attachment: scroll;
+	bottom: 0pt;
+	color: black;
 }
